@@ -24,7 +24,7 @@ function photographerFactory(data) {
 
   function getUserCardDOM() {
     const article = document.createElement("article");
-    const baseURL = "/photographer.html";
+    const baseURL = "PhilippeCharpentier_6_06122021/photographer.html";
     const url = `${baseURL}?photographer=${id}`;
     article.innerHTML = `
       <a href=${url}>
