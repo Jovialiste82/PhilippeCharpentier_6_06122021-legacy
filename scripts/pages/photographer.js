@@ -1,6 +1,6 @@
 //Mettre le code JavaScript lié à la page photographer.html
 async function getData(photographerId) {
-  const res = await fetch("data/photographers.json", {
+  const res = await fetch("../../data/photographers.json", {
     headers: {
       Accept: "application/json",
     },
