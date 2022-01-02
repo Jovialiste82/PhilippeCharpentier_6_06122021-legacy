@@ -2,7 +2,7 @@
 async function getData(photographerId) {
   const res = await fetch("data/photographers.json", {
     headers: {
-      "Content-Type": "application/json",
+      Accept: "application/json",
     },
   });
   const data = await res.json();
