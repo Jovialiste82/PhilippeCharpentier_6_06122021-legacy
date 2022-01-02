@@ -1,13 +1,10 @@
 async function getPhotographers() {
   // Penser à remplacer par les données récupérées dans le json
-  const res = await fetch(
-    "PhilippeCharpentier_6_06122021/data/photographers.json",
-    {
-      headers: {
-        Accept: "application/json",
-      },
-    }
-  );
+  const res = await fetch("data/photographers.json", {
+    headers: {
+      Accept: "application/json",
+    },
+  });
   const data = await res.json();
   console.log(data.photographers);
   // et bien retourner le tableau photographers seulement une fois
