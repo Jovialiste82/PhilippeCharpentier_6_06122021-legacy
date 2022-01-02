@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header>
+      <a href="/"><img src="assets/images/logo.png" class="logo" /></a>
+    </header>
+    <main id="main">
+      <header class="photograph-header"></header>
+      <nav class="sort-cards">Trier par</nav>
+      <section class="portfolio-section"></section>
+    </main>
+
+    <!-- ------- lightbox ---------- -->
+    <div class="slider-modal">
+      <div class="slider-container">
+        <div class="arrow-left-container">
+          <div class="arrow-left"></div>
+        </div>
+        <div class="slider-media-container"></div>
+        <div class="arrow-right-container">
+          <div class="arrow-right"></div>
+        </div>
+        <div class="close-lightbox">x</div>
+      </div>
+    </div>
+    <!-- ------- End of lightbox ---------- -->
+
+    <!-- ------- Contact Modal ---------- -->
+    <div id="contact_modal">
+      <div class="modal">
+        <header>
+          <h2>Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()" />
+        </header>
+        <form>
+          <div>
+            <label>Prénom</label>
+            <input />
+          </div>
+          <button class="contact_button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <!-- ------- End of Contact Modal ---------- -->
+    <script src="/scripts/utils/lightbox.js"></script>
+    <script src="scripts/factories/media.js"></script>
+    <script src="/scripts/pages/photographer.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+  </body>
+</html>

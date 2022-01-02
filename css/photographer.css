@@ -1,0 +1,251 @@
+:root {
+  /* PRIMAIRE */
+  --clr-primary-1: #901c1c;
+  --clr-primary-2: #d3573c;
+  --black: #000000;
+  --white: #ffffff;
+  --lightGrey: #757575;
+
+  /* SECONDAIRE */
+  --clr-secondary-1: #525252;
+  --clr-secondary-2: #fafafa;
+}
+
+body {
+  position: relative;
+}
+
+main {
+  margin: 20px 0;
+}
+
+#contact_modal {
+  display: none;
+}
+
+.photograph-header {
+  background-color: var(--clr-secondary-2);
+  height: 313px;
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.photograph-header img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.photographer-name {
+  color: var(--clr-primary-2);
+  font-size: 36px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 47px;
+  text-align: center;
+  margin: 1px 0;
+}
+
+.contact_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: var(--clr-primary-1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  border-radius: 5px;
+  background-color: #db8876;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  margin: auto;
+}
+
+.modal header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal header img {
+  cursor: pointer;
+}
+
+.modal header h2 {
+  font-size: 64px;
+  font-weight: normal;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  color: #312e2e;
+  font-size: 36px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+}
+
+form input {
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* //////////////////////////// */
+/* /////// Cards ////////////// */
+
+.portfolio-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  padding: 0 100px;
+}
+
+.portfolio-section article {
+  display: flex;
+  justify-content: center;
+}
+
+.media-card img {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sort-cards {
+  height: 40px;
+  padding: 20px 100px 30px 100px;
+}
+
+.media-card-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.media-card-likes,
+.media-card-title {
+  color: var(--clr-primary-1);
+}
+
+/* /////// End of Cards ////////////// */
+/* /////////////////////////////////// */
+
+/* ///////////////////////////// */
+/* /////// Slider ////////////// */
+
+.slider-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.slider-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  overflow: hidden;
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.arrow-left-container,
+.arrow-right-container {
+  width: 5vw;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-left,
+.arrow-right {
+  width: 20px;
+  height: 20px;
+  border-left: solid 4px var(--clr-primary-1);
+  border-bottom: solid 4px var(--clr-primary-1);
+  cursor: pointer;
+}
+
+.arrow-left {
+  transform: rotateZ(45deg);
+}
+
+.arrow-right {
+  transform: rotateZ(225deg);
+}
+
+.slider-media-container {
+  width: 60vw;
+  overflow: hidden;
+  display: flex;
+}
+
+.slide-media-container img {
+  width: 60vw;
+  height: 65vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide p {
+  color: var(--clr-primary-1);
+}
+
+.slide {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  display: none;
+}
+
+/* .hide-slide {
+  display: none;
+} */
+
+.close-lightbox {
+  color: var(--clr-primary-1);
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 50px;
+  line-height: 20px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* ///// End of Slider ////////////// */
+/* ////////////////////////////////// */
