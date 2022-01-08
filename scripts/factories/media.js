@@ -2,7 +2,7 @@
 
 class VideoMediaSubFactory {
   static render(video, w, h) {
-    return `<video width=${w} height=${h}  controls="controls" preload="metadata">
+    return `<video class="lb-target" width=${w} height=${h}  controls="controls" preload="metadata">
                 <source src="assets/images/${video}" type="video/mp4">
               </video>`;
   }
@@ -10,7 +10,7 @@ class VideoMediaSubFactory {
 
 class ImageMediaSubFactory {
   static render(image, title, type) {
-    return `<img class="media-${type}-img" src="assets/images/${image}" alt="${title}">`;
+    return `<img class="media-${type}-img lb-target" src="assets/images/${image}" alt="${title}">`;
   }
 }
 

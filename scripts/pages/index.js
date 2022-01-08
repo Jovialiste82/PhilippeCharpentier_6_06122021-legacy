@@ -1,15 +1,21 @@
 async function getPhotographers() {
-  // Penser à remplacer par les données récupérées dans le json
+  // Fecth data located in JSON
   const res = await fetch("data/photographers.json", {
     headers: {
       Accept: "application/json",
     },
   });
   const data = await res.json();
-  console.log(data.photographers);
+
+  // Store data in Local Storage (like feature and other evolutions)
+  if (localStorage.getItem("data") == null) {
+    localStorage.setItem("data", JSON.stringify(data));
+  }
+
   // et bien retourner le tableau photographers seulement une fois
   return {
-    photographers: [...data.photographers],
+    // photographers: [...data.photographers],
+    photographers: JSON.parse(localStorage.getItem("data")).photographers,
   };
 }
 

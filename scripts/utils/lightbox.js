@@ -5,7 +5,7 @@ const closeBtn = document.querySelector(".close-lightbox");
 
 const enableLightboxListeners = () => {
   // Create an array of all media cards
-  const mediaCardsList = Array.from(document.querySelectorAll(".media-card"));
+  const mediaCardsList = Array.from(document.querySelectorAll(".lb-target"));
   // Create an array of all slides elements
   const slides = Array.from(document.querySelectorAll(".slide"));
   // Create an array holding ids of all media for navigation purposes

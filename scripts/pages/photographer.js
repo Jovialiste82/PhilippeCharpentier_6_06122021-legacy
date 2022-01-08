@@ -1,11 +1,13 @@
 //Mettre le code JavaScript lié à la page photographer.html
+
 async function getData(photographerId) {
-  const res = await fetch("data/photographers.json", {
-    headers: {
-      Accept: "application/json",
-    },
-  });
-  const data = await res.json();
+  // const res = await fetch("data/photographers.json", {
+  //   headers: {
+  //     Accept: "application/json",
+  //   },
+  // });
+  // const data = await res.json();
+  const data = JSON.parse(localStorage.getItem("data"));
   console.log(data);
   const photographer = data.photographers.find((p) => p.id === photographerId);
   const portfolio = data.media
@@ -44,15 +46,20 @@ function displayMedia(portfolioArray) {
     portfolioSection.appendChild(mediaCardDOM);
     lightboxSection.appendChild(mediaSlidesDOM);
   });
+  enableLikeFeature();
   enableLightboxListeners();
 }
 
 async function init() {
+  // retrieve data from Local Storage
+  // const likesFromLS = JSON.parse(localStorage.getItem("likes"));
+  // console.log(likesFromLS);
   const urlParams = new URLSearchParams(window.location.search);
   const photographerId = parseInt(urlParams.get("photographer"));
   const { photographer, portfolio, totalLikes } = await getData(photographerId);
   // console.log(photographer);
   console.log(portfolio);
+  console.log(photographer);
   // console.log(totalLikes);
   displayPhotographerInfo(photographer);
   displayMedia(portfolio);
