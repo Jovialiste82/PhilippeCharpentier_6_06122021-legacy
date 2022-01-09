@@ -5,7 +5,9 @@ async function getPhotographers() {
       Accept: "application/json",
     },
   });
-  const data = await res.json();
+  let data = await res.json();
+  const newDataMediaArr = data.media.sort((a, b) => b.likes - a.likes);
+  data = { ...data, media: newDataMediaArr, sort: "likes" };
 
   // Store data in Local Storage (like feature and other evolutions)
   if (localStorage.getItem("data") == null) {

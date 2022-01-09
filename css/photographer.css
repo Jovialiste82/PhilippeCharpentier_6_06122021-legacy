@@ -17,6 +17,7 @@ body {
 
 main {
   margin: 20px 0;
+  padding-bottom: 60px;
 }
 
 #contact_modal {
@@ -154,6 +155,10 @@ form input {
   color: var(--clr-primary-1);
 }
 
+.media-card-likes {
+  cursor: pointer;
+}
+
 /* /////// End of Cards ////////////// */
 /* /////////////////////////////////// */
 
@@ -249,3 +254,91 @@ form input {
 
 /* ///// End of Slider ////////////// */
 /* ////////////////////////////////// */
+
+/* /////////////////////////////////////////// */
+/* ///// Start of Select Button ////////////// */
+
+.sort-cards {
+  display: flex;
+}
+
+.sort-cards p {
+  margin-right: 30px;
+}
+
+.sort-button-main {
+  background-color: #901c1c;
+  border: none;
+  padding: 10px 0 10px 20px;
+  color: white;
+  width: 10vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-button-group {
+  position: relative;
+}
+
+.dropdown-sort-list {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #901c1c;
+  width: 10vw;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  color: white;
+  z-index: 10;
+}
+
+.dropdown-sort-list button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: white 2px solid;
+  background-color: transparent;
+  color: white;
+  /* pading-right: auto; */
+  text-align: left;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown-sort-list button:last-child {
+  border-bottom: none;
+}
+
+/* ///// End of Select Button ////////////// */
+/* ///////////////////////////////////////// */
+
+aside {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 20vw;
+  height: 5vh;
+  background-color: var(--clr-primary-2);
+  color: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.aside-container div {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.aside-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

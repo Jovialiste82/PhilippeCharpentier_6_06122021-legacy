@@ -17,8 +17,20 @@
     </header>
     <main id="main">
       <header class="photograph-header"></header>
-      <nav class="sort-cards">Trier par</nav>
+      <nav class="sort-cards">
+        <p>Trier par</p>
+        <div class="sort-button-group">
+          <div class="sort-button-main">Popularité</div>
+          <!-- <label class="sort-button-main">Popularité</label> -->
+          <div class="dropdown-sort-list hidden">
+            <button class="sort-button" data-sort="likes">Popularité</button>
+            <button class="sort-button" data-sort="date">Date</button>
+            <button class="sort-button" data-sort="title">Titre</button>
+          </div>
+        </div>
+      </nav>
       <section class="portfolio-section"></section>
+      <aside></aside>
     </main>
 
     <!-- ------- lightbox ---------- -->
@@ -44,11 +56,17 @@
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
         <form>
-          <div>
-            <label>Prénom</label>
-            <input />
+          <div class="formData">
+            <label for="first">Prénom</label>
+            <input class="text-control" type="text" id="first" name="first" />
+            <label for="last">Nom</label>
+            <input class="text-control" type="text" id="last" name="last" />
+            <label for="email">Email</label>
+            <input class="text-control" type="email" id="email" name="email" />
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea>
           </div>
-          <button class="contact_button">Envoyer</button>
+          <button type="submit" class="contact_button">Envoyer</button>
         </form>
       </div>
     </div>
@@ -58,5 +76,6 @@
     <script src="scripts/factories/media.js"></script>
     <script src="scripts/pages/photographer.js"></script>
     <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/utils/sortButton.js"></script>
   </body>
 </html>

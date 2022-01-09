@@ -2,10 +2,16 @@
 
 const toggleLikeCount = (e) => {
   // Create function to update DOM based on new likes value
-  const updateLikeDOM = (newCount) => {
+  const updateLikeDOM = (newCount, totalLikes) => {
+    const totalLikesDiv =
+      document.querySelector(".aside-container").firstElementChild;
     e.target.innerText = e.target.innerText
       .split(" ")
       .map((el, idx) => (idx === 0 ? newCount.toString() : el))
+      .join(" ");
+    totalLikesDiv.innerText = totalLikesDiv.innerText
+      .split(" ")
+      .map((el, idx) => (idx === 0 ? totalLikes : el))
       .join(" ");
   };
 
@@ -22,6 +28,14 @@ const toggleLikeCount = (e) => {
     ? mediaObj.likes - 1
     : mediaObj.likes + 1;
 
+  // totalLikes
+  const totalLikesDiv =
+    document.querySelector(".aside-container").firstElementChild;
+  let newTotalLikesCount = parseInt(totalLikesDiv.innerText.split(" ")[0]);
+  newTotalLikesCount = mediaObj.alreadyLiked
+    ? newTotalLikesCount - 1
+    : newTotalLikesCount + 1;
+
   // update media array of in data object
   const mediaArr = data.media.map((m) =>
     m.id !== mediaId ? m : { ...m, likes: newMediaLikesCount, alreadyLiked }
@@ -32,7 +46,7 @@ const toggleLikeCount = (e) => {
   localStorage.setItem("data", JSON.stringify(data));
 
   // Update DOM
-  updateLikeDOM(newMediaLikesCount);
+  updateLikeDOM(newMediaLikesCount, newTotalLikesCount);
 };
 
 const enableLikeFeature = () => {
