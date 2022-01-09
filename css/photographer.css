@@ -20,8 +20,19 @@ main {
   padding-bottom: 60px;
 }
 
+/* ///////////////////////////////// */
+/* /////// Form Modal ////////////// */
+
 #contact_modal {
   display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .photograph-header {
@@ -66,7 +77,7 @@ main {
 .modal {
   border-radius: 5px;
   background-color: #db8876;
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
